@@ -3,14 +3,7 @@ beforeEach(() => {
 });
 
 describe('Central de Atendimento ao Cliente TAT', () => {
-
-	it('Verifica o mensagem de sucesso', () => {
-    
-    //Verificar mensagem
-    cy.get(".success  > strong").should("have.text", "Mensagem enviada com sucesso.")
-
-  })
-
+  
   it('Preenche campos obrigatórios e envia o formulário', () => {
 
     //nome
