@@ -9,7 +9,7 @@ describe('Atividade 05 - Marcando e desmarcando inputs checkbox', () => {
     //Marca todos os checkbox
     cy.get('input[type="checkbox"]') //pega todos os checkbox da página
     .check()
-    .should('be.checked')
+    .should('be.checked') //verifica se os checkbox foram clicados
     .last() //pega o último
     .uncheck() //desmarca
     .should('not.be.checked') //checa só o último por causa do .last() e verifica se ele foi desmarcado
