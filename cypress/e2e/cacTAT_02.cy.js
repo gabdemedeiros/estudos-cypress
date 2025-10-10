@@ -18,6 +18,14 @@ describe('Central de Atendimento ao Cliente TAT', () => {
     //Feedback
     cy.get("#open-text-area").type("testando de novo um texto maior dessa vez").click()
 
+    //Seleciona um arquivo da pasta fixtures
+
+    cy.get('input[type="file"]')
+        .selectFile('cypress/fixtures/cachorro.jpg')
+        .should(input => {
+            expect(input[0].files[0].name).to.equal('cachorro.jpg')
+        })
+
     //Enviar
     cy.get('button[type="submit"]').click()
 
